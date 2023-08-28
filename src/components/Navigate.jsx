@@ -53,6 +53,7 @@ function Navigate() {
   };
 
   return (<>
+     <Router>
     <AppBar position="fixed" style={styles.AppBar}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -101,12 +102,12 @@ function Navigate() {
               onClose={handleCloseNavMenu}>
               <MenuItem onClick={handleCloseNavMenu} style={styles.Button}>
                 <Button style={styles.Button}
-                ><a href='/' style={{ textDecoration: 'none'}}>Blog</a>
+                ><Link to="/">Bloger</Link>
                 </Button>
                 <Button
                 style={styles.Button}
-                ><a href='/Form' style={{ textDecoration: 'none' }}
-                >Post<SendIcon />
+                ><Link to="/Form">Post Blog</Link>
+                Post<SendIcon />
                 </a>
                 </Button>
               </MenuItem>
@@ -131,19 +132,18 @@ function Navigate() {
           >
       TechBlog
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Button
               style={styles.Button}
               onClick={handleCloseNavMenu}>
               <Typography>
-                <a href='/' style={{ textDecoration: 'none', display: 'block',color:'white' }}>Blog</a></Typography>
+                  <Link to="/">Bloger</Link></Typography>
             </Button>&nbsp;
             <Button
               style={styles.Button}
               onClick={handleCloseNavMenu}>
               <Typography>
-                <a href='/Form' style={{ textDecoration: 'none', display: 'block',color:'white' }}>Post Blog</a></Typography>
+                 <Link to="/Form">Post Blog</Link></Typography>
             </Button>
           </Box>
 
@@ -178,9 +178,6 @@ function Navigate() {
         </Toolbar>
       </Container>
     </AppBar>
-    <Router>
-      <Link to="/"></Link>
-      <Link to="/Form"></Link>
       <Routes>
         <Route exact path='/' element={<Blog/>}></Route>
         <Route exact path='/Form' element={<Form />}></Route>
