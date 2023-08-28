@@ -108,7 +108,6 @@ function Navigate() {
                 style={styles.Button}
                 ><Link to="/Form">Post Blog</Link>
                 Post<SendIcon />
-                </a>
                 </Button>
               </MenuItem>
             </Menu>
