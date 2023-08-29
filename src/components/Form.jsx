@@ -4,7 +4,7 @@ import { TextField, Button, Container, Typography } from '@mui/material';
 import { Send as SendIcon } from '@mui/icons-material';
 import Image from '../media/backg.jpeg'
 const Form = () => {
-  const apiUrl = 'https://thalla.vercel.app'
+  
   const [title, setTitle] = useState('')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -26,7 +26,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post(`${apiUrl}/registrations`, {
+    Axios.post(`https://thalla.vercel.app/registrations`, {
       Name: name,
       Email: email,
       Blog: blog,
