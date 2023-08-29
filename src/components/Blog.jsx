@@ -21,7 +21,7 @@ const Blog = () => {
   const [data, setData] = useState([' '])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/blogdatas')
+    axios.get('https://thalla.vercel.app/blogdatas')
       .then(response => {
         setData(response.data);
         console.log(data)
