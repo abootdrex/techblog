@@ -4,7 +4,7 @@ import { TextField, Button, Container, Typography } from '@mui/material';
 import { Send as SendIcon } from '@mui/icons-material';
 import Image from '../media/backg.jpeg'
 const Form = () => {
-  const apiUrl = 'https://thalla.vercel.app/'
+  const apiUrl = 'https://thalla.vercel.app'
   const [title, setTitle] = useState('')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
